@@ -1,0 +1,61 @@
+body{
+    overflow: hidden;
+}
+.main{
+    position: relative;
+}
+.navbtn{
+    display: none;
+}
+.navbtn .bx{
+    font-size: 30px;
+}
+@media(max-width:768px){
+.main .text h1{
+    font-size: 35px;
+    font-weight: 500;
+}
+.main .text p{
+    font-size: 15px;
+}
+.main .navbar img{
+    width: 140px;
+}
+.main .navbar button{
+    font-size: 18px;
+    padding: 8px;
+}
+.navbtn{
+    display: block;
+    cursor: pointer;
+}
+ .navlist{
+    flex-direction: column;
+    justify-content: space-evenly;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    text-align: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateX(100%);
+    visibility: hidden;
+    pointer-events: none;
+    transition:all .6s linear;
+}
+.active .navlist{
+    opacity: 1;
+    transform: translateX(0);
+    visibility: visible;
+    pointer-events: auto;
+}
+.active .navbtn{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+}
